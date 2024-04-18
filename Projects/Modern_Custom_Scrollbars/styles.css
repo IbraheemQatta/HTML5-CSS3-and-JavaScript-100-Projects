@@ -1,0 +1,26 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to left, rgb(157, 76, 207), rgb(168, 39, 99));
+}
+
+.box {
+  background-color: aliceblue;
+  margin: 15px;
+  width: 600px;
+  padding: 10px;
+}
+
+::-webkit-scrollbar {
+  background: rgb(157, 76, 207);
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(45deg, #fb9261 0%, #ff5acd 100%);
+  border-radius: 100px;
+}

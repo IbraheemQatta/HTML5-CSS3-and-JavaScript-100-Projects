@@ -1,0 +1,215 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(79, 79, 79);
+  padding: 10px;
+  font-family: cursive;
+}
+
+/* .btn-containers {
+
+  text-align: center;
+} */
+
+a {
+  width: 250px;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 26px;
+  padding: 20px 40px;
+  border-radius: 4px;
+  margin: 75px auto;
+  text-align: center;
+}
+
+.btn1 {
+  position: relative;
+  border: 2px solid #fff;
+  overflow: hidden;
+}
+
+.btn1::before {
+  content: "Download";
+  color: #333;
+  font-size: 30px;
+  line-height: 2.5;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  left: 0;
+  background: linear-gradient(to bottom, rgb(45, 255, 150), rgb(82, 183, 15));
+  transition: top 0.5s;
+}
+
+.btn1:hover::before {
+  top: 0;
+}
+
+.btn2 {
+  position: relative;
+  /* overflow: hidden; */
+  background-color: crimson;
+}
+
+.btn2::after,
+.btn2::before {
+  content: "BUTTON";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0%;
+  text-align: center;
+  line-height: 3;
+  border-radius: 4px;
+  letter-spacing: 1.5px;
+  transform-origin: top;
+  transform: rotateX(270deg);
+  transition: transform 0.5s ease-in-out;
+}
+.btn2::after {
+  background-color: blueviolet;
+  transition-delay: 0.5s;
+}
+.btn2::before {
+  background-color: coral;
+}
+.btn2:hover::before {
+  transform: rotateX(0deg);
+}
+.btn2:hover::after {
+  transform: rotateX(0deg);
+  transition-delay: 0.4s;
+}
+
+.btn3 {
+  color: transparent;
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s;
+}
+
+.btn3::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  background-color: blueviolet;
+  z-index: -1;
+  /* mix-blend-mode: multiply; */
+  transform-origin: top;
+  transition: all 0.3s;
+}
+.btn3::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  background-color: rgb(226, 43, 189);
+  z-index: -1;
+  /* mix-blend-mode: multiply; */
+  transform-origin: bottom;
+  transition: all 0.3s;
+}
+
+.btn3:hover {
+  color: #fff;
+  transition-delay: 0.2s;
+}
+
+.btn3:hover::before {
+  top: -6px;
+  left: 0;
+  transform: perspective(1000px) rotateX(75deg);
+}
+.btn3:hover::after {
+  top: 6px;
+  left: 0;
+  transform: perspective(1000px) rotateX(-75deg);
+}
+
+
+/* button 4 */
+
+.btn4 {
+  background-color: rgb(0, 38, 108);
+  position: relative;
+}
+
+.btn4::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  width: 15%;
+  height: 45%;
+  border-top: 4px solid rgb(0, 48, 108);
+  border-left: 3px solid rgb(0, 38, 108);
+  transition: all 0.3s;
+}
+.btn4::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  right: -8px;
+  width: 15%;
+  height: 45%;
+  border-bottom: 4px solid rgb(0, 48, 108);
+  border-right: 3px solid rgb(0, 38, 108);
+  transition: all 0.3s;
+}
+
+.btn4:hover::before, .btn4:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+/* button 5 */
+
+.btn5 {
+  background-color: blanchedalmond;
+  color:chocolate;
+  border-radius: 100vmax;
+  font-weight: 600;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.btn5::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 100vmax;
+  transition: all 0.5s;
+  z-index: -1;
+}
+
+.btn5:hover::before {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0.1;
+}
+
+.btn5:hover {
+  transform: translateX(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.btn5:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
